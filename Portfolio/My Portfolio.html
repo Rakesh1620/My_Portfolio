@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="My Portfolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://kit.fontawesome.com/83c913584f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="head">
+      <ul id="sidemenu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#About">ABOUT</a></li>
+        <li><a href="#Education">EDUCATION</a></li>
+        <li><a href="#Projects">PROJECTS</a></li>
+        <li><a href="#Contact">CONTACT</a></li>
+        <i class="fa-solid fa-xmark" style="color: #fff;" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" style="color: #fff;" onclick="openmenu()"></i>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="img">
+      <img src="assests/My Name.png" height="150px" width="250px">
+    </div>
+    <div class="detail">
+      <h1>I'm <span> Rakesh Malireddy</span></h1>
+      <p>This is my official Portfolio website to show all My
+        <br>Details and Work expertise on web Development
+      </p>
+
+    </div>
+    <div class="images">
+      <img src="assests/My Image.jpg" alt="Img Not Found" class="picture">
+    </div>
+  </div>
+
+  <!-- ---------------------------------------------Welcome Responsive Script------------------------------------------- -->
+<script>
+  
+  var sidemenu= document.getElementById("sidemenu");
+  function openmenu(){
+    sidemenu.style.right="0";
+  }
+  function closemenu(){
+    sidemenu.style.right="-205px";
+  }
+  
+</script>
+  <!--------------------------------------------------------About------------------------------------------------------------>
+  <div id="About">
+    <div class="container1">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="assests/My About Image.jpg" alt="">
+        </div>
+        <div class="about-col-2">
+          <h2 class="sub-title">About <span>Me</span></h2>
+          <p>A beginner in Web Development with my maximum effort to learn new things and want to become a Skillful
+             Designer. My ultimate goal is to utilize my skills to build impactful and user-friendly Web Designs.
+             Whether it's crafting sleek experiences or solving complex problems with code, I'm driven by the desire 
+             to create something that leaves a lasting impression.
+          </p>
+
+          <div class="tab-titles">
+            <p1 class="tab-links active-link" onclick="opentab('skills')">Skills</p1>
+            <p1 class="tab-links" onclick="opentab('experience')">Experiences</p1>
+            <p1 class="tab-links" onclick="opentab('certifications')">Certifications</p1>          
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Programming</span><br>Coding Skills on Java/Python</li>
+
+              <li><span>Project Management</span><br>Making Project Applications and Development</li>
+
+              <li><span>Web Development</span><br>Web App Development, Using HTML,CSS & JS, Angular & Bootstrap</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>JAVA Full Stack Developer at TECHWING</span><br>Learned New Skills on Programming and Web Development - 8 months</li>
+
+              <li><span>InternShip at APSCHE</span><br>Learned the usage of AI tools & Online Application Services - 1 month </li>
+
+              <li><span>InternShip at APSSDC</span><br>Making Project Application on DJANGO using Python - 2 months </li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="certifications">
+            <ul>
+              <li><span>JAVA Developer and IT SPECIALIST by CERTIPORT</span><br>Learned Making Skills for Career Improvement</li>
+
+              <li><span>AIMERS Certificate by APSCHE</span><br>Focused on developing theoretical knowledge and technology of AI tools</li>
+
+              <li><span>DJANGO Certificate by APSSDC</span><br>Made a Project and got Certificate on DJANGO Framework using Python</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (var tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (var tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+  </script>
+
+  <!--------------------------------------------------------Education--------------------------------------------------------->
+  <div class="education">
+    <h2 id="Education"><span>E</span>ducation</h2>
+  </div>
+  <div class="edu">
+    
+    <div class="card">
+      <img src="assests/Giet A+.jpg" alt="">
+      <h2><span>Engineering</span></h2>
+      <p>Graduated with a Bachelor's degree in Computer Science & Engineering from GGU University
+        <br>- RAJAHMUNDRY.
+      </p>
+      <p class="time-period-1">2022 - 2025</p>
+    </div>
+
+    <div class="card">
+      <img src="assests/SBTET_Logo.png" alt="">
+      <h2><span>Diploma</span></h2>
+      <p>Obtained a Diploma in Computer Engineering at Govt Polytechnic College
+        <br>- CHODAVARAM.
+      </p>
+      <p class="time-period-2">2019 - 2022</p>
+    </div>
+
+    <div class="card">
+      <img src="assests/AP_SSC_Logo.png" alt="">
+      <h2><span>Schooling</span></h2>
+      <p>Completed my High School education from S V L N Z P High School
+        <br>- GOPALAPATNAM.
+      </p>
+      <p class="time-period-3">- 2019</p>
+    </div>
+    
+  </div>
+
+  <!---------------------------------------------------------Projects---------------------------------------------------->
+
+  <div class="projects">
+    <h2 id="Projects"><span>P</span>rojects</h2>
+    <div class="container2">
+      <div class="work">
+        <img src="assests/Project Image 1.jpg" alt="">
+        <div class="layer">
+          <h3>Netflix-Clone</h3>
+          <p>Made a Netflix-clone as a Reference from Original Netflix and made a Project with basics of HTML and CSS
+          </p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <div class="work">
+        <img src="assests/Project Image 2.jpg" alt="">
+        <div class="layer">
+          <h3>JDBC Project</h3>
+          <p>Made a project to perform CRUD Operations b/w ECLLIPSE and MySQL using JDBC in Backend</p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <div class="work">
+        <img src="assests/Project Image 3.jpg" alt="">
+        <div class="layer">
+          <h3>Hospital Management System</h3>
+          <p>A Django-based web application for efficient management of hospital operations and staff management</p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+    <button class="btn">See More</button>
+  </div>
+
+
+  <!---------------------------------------------------------Contact---------------------------------------------------->
+  <div class="contact">
+    <div class="row">
+      <div class="contact-left">
+        <h2 id="Contact"><span>C</span>ontact Me</h2>
+        <p><i class="fa-solid fa-envelope"></i> rakeshmalireddy03@gmail.com</p>
+        <p><i class="fa-solid fa-square-phone"></i> +91 9063276335</p>
+        <div class="social-icons">
+          <a href="https://github.com/Rakesh5111"><i class="fa-brands fa-github"></i></a>
+          <a href=" "><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/mr_.psycho_boy_?igsh=cjRtZDhieWhpMWY0"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/rakesh-malireddy-ba3108286/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <a href="assests/MALIREDDY RAKESH Resume.pdf"><button download class="btn">Download CV</button></a>
+      </div>
+
+
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Contact Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"> </span>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>copyright &#169 Rakesh. Made with <i class="fa-solid fa-heart fa-beat"></i> by MALIREDDY RAKESH </p>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------------Contact-Form Script--------------------------------------------------- -->
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwDbsXi7-8WlM1g6ouxt0cTB6AirLSsYD_k5r4fOZ4qEfYysJCnOpoefTMF31tdHat6/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Message Sent Successfully"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          },5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
